@@ -1,20 +1,14 @@
 import styles from "../styles/Home.module.css";
+import Header from "../components/Header/Header";
+import Main from "../components/Main/Main";
+import Footer from "../components/Footer/Footer";
 
 const MainPage = () => {
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.logo}>logo</div>
-        <nav>
-          <ul>
-            <li>zxxxxx</li>
-            <li>zxxxxx</li>
-            <li>zxxxxx</li>
-            <li>zxxxxx</li>
-            <li>zxxxxx</li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
+      <Main />
+      <Footer />
     </>
   );
 };
