@@ -1,7 +1,11 @@
 import styles from "./styles.module.css";
 
-const Header = () => {
-  return <header className={styles.main}>header</header>;
+const Header = ({ isDisplayLogo }) => {
+  return (
+    <header className={styles.main}>
+      {isDisplayLogo && <div>FEUA-15</div>}
+    </header>
+  );
 };
 
 export default Header;
