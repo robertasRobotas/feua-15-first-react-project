@@ -9,14 +9,6 @@ const MainPage = () => {
 
   return (
     <>
-      <button
-        onClick={() => {
-          console.log("click");
-          setDisplayLogo(true);
-        }}
-      >
-        click
-      </button>
       <Header isDisplayLogo={isDisplayLogo} />
       <Main />
       <Footer />
