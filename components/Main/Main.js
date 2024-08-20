@@ -1,11 +1,10 @@
-import DressWrapper from "../DressWrapper/DressWrapper";
-import Questions from "../Questions/Questions";
+import CharacterWrapper from "../CharacterWrapper/CharacterWrapper";
 import styles from "./styles.module.css";
 
-const Main = ({ dress }) => {
+const Main = ({ characters, setCharacters }) => {
   return (
     <main className={styles.main}>
-      <DressWrapper dress={dress} />
+      <CharacterWrapper characters={characters} setCharacters={setCharacters} />
     </main>
   );
 };

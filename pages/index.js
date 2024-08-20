@@ -6,25 +6,31 @@ import Footer from "../components/Footer/Footer";
 import axios from "axios";
 
 const MainPage = () => {
-  const [dress, setDress] = useState();
+  const [characters, setCharacters] = useState();
 
-  const fetchDress = async () => {
-    const fetchedDress = await axios.get(
-      "https://665f30f41e9017dc16f33d42.mockapi.io/clothes"
+  const fetchCharacters = async () => {
+    const fetchedCharacters = await axios.get(
+      "https://hp-api.onrender.com/api/characters"
     );
 
-    setDress(fetchedDress.data);
-    console.log(fetchedDress);
+    setCharacters(fetchedCharacters.data);
+    console.log(fetchedCharacters.data);
   };
 
   useEffect(() => {
-    fetchDress();
+    fetchCharacters();
   }, []);
+
+  const links = [
+    { link: "#", title: "About" },
+    { link: "#", title: "Portfolio" },
+    { link: "#", title: "Contacts" },
+  ];
 
   return (
     <>
-      <Header />
-      <Main dress={dress} />
+      <Header links={links} />
+      <Main characters={characters} setCharacters={setCharacters} />
       <Footer />
     </>
   );
